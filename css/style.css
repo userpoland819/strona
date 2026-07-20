@@ -2,22 +2,6 @@
 @font-face {
   font-family: 'Jost';
   font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url('../fonts/Jost-300-latin-ext.woff2') format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-@font-face {
-  font-family: 'Jost';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url('../fonts/Jost-300-latin.woff2') format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-@font-face {
-  font-family: 'Jost';
-  font-style: normal;
   font-weight: 400;
   font-display: swap;
   src: url('../fonts/Jost-400-latin-ext.woff2') format('woff2');
@@ -66,22 +50,6 @@
 @font-face {
   font-family: 'Playfair Display';
   font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url('../fonts/PlayfairDisplay-500-latin-ext.woff2') format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-@font-face {
-  font-family: 'Playfair Display';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url('../fonts/PlayfairDisplay-500-latin.woff2') format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-@font-face {
-  font-family: 'Playfair Display';
-  font-style: normal;
   font-weight: 600;
   font-display: swap;
   src: url('../fonts/PlayfairDisplay-600-latin-ext.woff2') format('woff2');
@@ -93,22 +61,6 @@
   font-weight: 600;
   font-display: swap;
   src: url('../fonts/PlayfairDisplay-600-latin.woff2') format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-@font-face {
-  font-family: 'Playfair Display';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url('../fonts/PlayfairDisplay-700-latin-ext.woff2') format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-@font-face {
-  font-family: 'Playfair Display';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url('../fonts/PlayfairDisplay-700-latin.woff2') format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
@@ -169,6 +121,12 @@ h1, h2, h3, .brand-name {
 
 a { color: var(--terra); text-decoration: none; }
 a:hover { color: var(--terra-dark); }
+/* Linki wewnątrz tekstu muszą się odróżniać nie tylko kolorem (WCAG) */
+p a, .prose a, .price-note a, .cookie-banner a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
 
 .container { width: min(1160px, 92%); margin: 0 auto; }
 
@@ -438,7 +396,7 @@ section { padding: 72px 0; }
   padding: 12px 20px;
   text-align: center;
 }
-.score b { display: block; font-size: 26px; color: #e8c9a8; font-family: 'Playfair Display', serif; }
+.score b { display: block; font-size: 26px; color: #e8c9a8; font-family: 'Playfair Display', serif; font-weight: 600; }
 .score span { font-size: 13px; letter-spacing: .1em; text-transform: uppercase; }
 .reviews-grid {
   display: grid;
@@ -745,7 +703,7 @@ section { padding: 72px 0; }
     padding: 20px 0;
     font-size: clamp(24px, 6vw, 32px);
     font-family: 'Playfair Display', Georgia, serif;
-    font-weight: 500;
+    font-weight: 600;
     text-transform: none;
     letter-spacing: .01em;
     color: #f3efe4;
